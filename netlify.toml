@@ -2,5 +2,7 @@
   publish = "."
   functions = "netlify/functions"
 
-[[functions]]
-  path = "/api/subscribe"
+[[redirects]]
+  from = "/api/subscribe"
+  to = "/.netlify/functions/subscribe"
+  status = 200

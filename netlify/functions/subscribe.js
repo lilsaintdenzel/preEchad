@@ -1,15 +1,17 @@
-export default async (req) => {
-    if (req.method !== 'POST') {
-        return new Response('Method not allowed', { status: 405 });
+exports.handler = async (event) => {
+    if (event.httpMethod !== 'POST') {
+        return { statusCode: 405, body: 'Method not allowed' };
     }
 
-    const { email } = await req.json();
+    let email;
+    try {
+        ({ email } = JSON.parse(event.body));
+    } catch {
+        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON' }) };
+    }
 
     if (!email) {
-        return new Response(JSON.stringify({ error: 'Email required' }), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        return { statusCode: 400, body: JSON.stringify({ error: 'Email required' }) };
     }
 
     const res = await fetch('https://api.brevo.com/v3/contacts', {
@@ -28,10 +30,9 @@ export default async (req) => {
 
     const data = res.status === 204 ? {} : await res.json();
 
-    return new Response(JSON.stringify(data), {
-        status: res.status,
+    return {
+        statusCode: res.status,
         headers: { 'Content-Type': 'application/json' },
-    });
+        body: JSON.stringify(data),
+    };
 };
-
-export const config = { path: '/api/subscribe' };
