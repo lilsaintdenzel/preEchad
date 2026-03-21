@@ -1,0 +1,17 @@
+{
+  "name": "Echad XR",
+  "short_name": "Echad XR",
+  "description": "Immersive Biblical Pilgrimage in Extended Reality",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#8B0000",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
