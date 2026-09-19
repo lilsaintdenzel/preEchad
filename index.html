@@ -20,14 +20,14 @@
         }
 
         :root {
-            --green: #33ff88;
-            --green-bright: #4dffa0;
-            --green-dim: #4a9d6a;
-            --green-faint: #2f6b48;
-            --green-glow: rgba(51, 255, 136, 0.25);
+            --green: #00ff41;
+            --green-bright: #4dff77;
+            --green-dim: #00a52e;
+            --green-faint: #0a7a24;
+            --green-glow: rgba(0, 255, 65, 0.25);
             --black: #000000;
-            --panel: rgba(51, 255, 136, 0.03);
-            --line: rgba(51, 255, 136, 0.18);
+            --panel: rgba(0, 255, 65, 0.03);
+            --line: rgba(0, 255, 65, 0.18);
         }
 
         html { scroll-behavior: smooth; }
@@ -48,8 +48,8 @@
             position: fixed;
             inset: 0;
             background-image:
-                linear-gradient(rgba(51, 255, 136, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(51, 255, 136, 0.02) 1px, transparent 1px);
+                linear-gradient(rgba(0, 255, 65, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.02) 1px, transparent 1px);
             background-size: 44px 44px;
             z-index: 0;
             pointer-events: none;
@@ -118,7 +118,7 @@
             font-weight: 700;
             letter-spacing: 0.04em;
             margin-bottom: 1.8rem;
-            color: var(--green-bright);
+            color: var(--green);
             text-shadow: 0 0 24px var(--green-glow);
             animation: fadeInUp 1s ease-out 0.3s both;
         }
