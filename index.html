@@ -55,7 +55,7 @@
             pointer-events: none;
         }
 
-        /* Main container — left aligned terminal layout */
+        /* Main container - left aligned terminal layout */
         .container {
             position: relative;
             z-index: 2;
@@ -391,7 +391,7 @@
         </p>
 
         <p class="scripture">
-            "Not my will, but yours." — Matthew 26:39
+            "Not my will, but yours." - Matthew 26:39
         </p>
 
         <div class="section-label">Notify</div>
@@ -446,7 +446,7 @@
         </div>
 
         <div class="footer">
-            <div class="hebrew-accent">אֵל אֶחָד — The LORD is One</div>
+            <div class="hebrew-accent">אֵל אֶחָד - The LORD is One</div>
             <p class="copyright">© PreachCode</p>
         </div>
     </div>
@@ -496,7 +496,7 @@
                     document.getElementById('emailInput').value = '';
                 } else {
                     const err = await res.json();
-                    // Contact already exists — treat as success
+                    // Contact already exists - treat as success
                     if (err.code === 'duplicate_parameter') {
                         successMsg.textContent = '✓ Already subscribed. See you in Gethsemane.';
                         successMsg.style.display = 'block';
